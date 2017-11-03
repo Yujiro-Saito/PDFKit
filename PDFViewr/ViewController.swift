@@ -7,19 +7,32 @@
 //
 
 import UIKit
+import PDFKit
+
 
 class ViewController: UIViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let pdfViewer = PDFView(frame: self.view.frame)
+        
+        //web pdf url
+        let pdfURL = URL(string: "http://www.city.morioka.iwate.jp/_res/projects/default_project/_page_/001/009/440/2017gakugeikouza01.pdf")!
+        
+        let doc = PDFDocument(url: pdfURL)
+        pdfViewer.document = doc
+        pdfViewer.backgroundColor = .lightGray
+        pdfViewer.autoScales = true
+        pdfViewer.displayMode = .singlePageContinuous
+        
+        self.view.addSubview(pdfViewer)
+        
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 
