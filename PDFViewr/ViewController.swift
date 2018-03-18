@@ -13,6 +13,9 @@ import PDFKit
 class ViewController: UIViewController {
     
     
+    let remote_branch = String()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
