@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     
     let remote_branch = String()
+    let merge_test = Int()
     
     
     override func viewDidLoad() {
