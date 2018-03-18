@@ -21,8 +21,8 @@ class ViewController: UIViewController {
         //web pdf url
         let pdfURL = URL(string: "http://www.city.morioka.iwate.jp/_res/projects/default_project/_page_/001/009/440/2017gakugeikouza01.pdf")!
         
-        let doc = PDFDocument(url: pdfURL)
-        pdfViewer.document = doc
+        let pdfDoc = PDFDocument(url: pdfURL)
+        pdfViewer.document = pdfDoc
         pdfViewer.backgroundColor = .lightGray
         pdfViewer.autoScales = true
         pdfViewer.displayMode = .singlePageContinuous
